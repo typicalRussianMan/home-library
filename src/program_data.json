@@ -1,40 +1,40 @@
 {
-    "books": [
-        {
-            "name": "book 1",
-            "author": "authors?id=89MtnYFuTjUsyzx0rg",
-            "id": "5g0aLvkCGHEOfFzUbB",
-            "publishing": "publishings?id=U4huDbZVLX8jogQBa2",
-            "year": 2020,
-            "illustration": "jojo.jpg"
-        },
-        {
-            "name": "book 2",
-            "author": "authors?id=2kyJ7AEXZeTp9MwV10",
-            "id": "785ghuhrH98H98",
-            "publishing": "publishings?id=tZhxoE9GDfRJzTHpVq",
-            "year": 1220,
-            "illustration": "jojo.jpg"
-        }
-    ],
-    "authors": [
-        {
-            "name": "Author 1",
-            "id": "89MtnYFuTjUsyzx0rg"
-        },
-        {
-            "name": "Author 2",
-            "id": "2kyJ7AEXZeTp9MwV10"
-        }
-    ],
-    "publishings": [
-        {
-            "name": "Publishing 1",
-            "id": "U4huDbZVLX8jogQBa2"
-        },
-        {
-            "name":"Publishing 2",
-            "id": "tZhxoE9GDfRJzTHpVq"
-        }
-    ]
+  "books": [
+    {
+      "name": "book 1",
+      "author": "authors?id=89MtnYFuTjUsyzx0rg",
+      "id": "5g0aLvkCGHEOfFzUbB",
+      "publishing": "publishings?id=y3qPVAQWli6Zo19cCG",
+      "year": 2020,
+      "illustration": "jojo.jpg"
+    },
+    {
+      "name": "book 2",
+      "author": "authors?id=2kyJ7AEXZeTp9MwV10",
+      "id": "785ghuhrH98H98",
+      "publishing": "publishings?id=ZgNEMqPOQcr4tCWGwf",
+      "year": 1220,
+      "illustration": "jojo.jpg"
+    }
+  ],
+  "authors": [
+    {
+      "id": "89MtnYFuTjUsyzx0rg",
+      "name": "Author 1"
+    },
+    {
+      "id": "2kyJ7AEXZeTp9MwV10",
+      "name": "Author 2"
+    }
+  ],
+  "publishings": [
+    {
+      "id": "ZgNEMqPOQcr4tCWGwf",
+      "name": "New Publishing..."
+    },
+    {
+      "id": "y3qPVAQWli6Zo19cCG",
+      "name": "New Publishing..."
+    }
+  ]
 }
