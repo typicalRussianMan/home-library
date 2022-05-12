@@ -14,26 +14,30 @@
       "id": "785ghuhrH98H98",
       "publishing": "publishings?id=ZgNEMqPOQcr4tCWGwf",
       "year": 1220,
-      "illustration": "jojo.jpg"
+      "illustration": "no-photo.png"
     }
   ],
   "authors": [
     {
-      "id": "89MtnYFuTjUsyzx0rg",
-      "name": "Author 1"
+      "name": "New Author...",
+      "id": "Dtn468zikQOdpF5hUm"
     },
     {
-      "id": "2kyJ7AEXZeTp9MwV10",
-      "name": "Author 2"
+      "name": "Chel",
+      "id": "2kyJ7AEXZeTp9MwV10"
+    },
+    {
+      "name": "Author Molod",
+      "id": "89MtnYFuTjUsyzx0rg"
     }
   ],
   "publishings": [
     {
-      "id": "ZgNEMqPOQcr4tCWGwf",
+      "id": "y3qPVAQWli6Zo19cCG",
       "name": "New Publishing..."
     },
     {
-      "id": "y3qPVAQWli6Zo19cCG",
+      "id": "ZgNEMqPOQcr4tCWGwf",
       "name": "New Publishing..."
     }
   ]
