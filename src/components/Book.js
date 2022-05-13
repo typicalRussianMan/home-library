@@ -52,4 +52,4 @@ export class Book extends React.Component {
 		)
 	}
 
-}
+} 

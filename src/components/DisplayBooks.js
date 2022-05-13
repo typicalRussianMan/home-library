@@ -40,4 +40,4 @@ export class DisplayBooks extends React.Component {
 		)
 	}
 
-}
+} 

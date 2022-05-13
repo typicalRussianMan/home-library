@@ -89,4 +89,4 @@ export class EditPublishings extends React.Component {
 		)
 	}
 
-}
+} 

@@ -89,4 +89,4 @@ export class EditAuthors extends React.Component {
 		)
 	}
 
-}
+} 
