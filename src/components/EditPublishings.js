@@ -66,21 +66,23 @@ export class EditPublishings extends React.Component {
 	render() {
 		return (
 			<div className='edit'>
-				<h3>Список издательств</h3>
+				<h3>Publishings list</h3>
 				{
 					this.state.publishings !== null ? 
 					this.state.publishings.map((el, i) => (
 						<div key={ i } className="edit-component">
-							<input type='text' value={el.name} onChange={e =>  this.handleChange(e.target.value, el.id, i) }/>
-							<button onClick={ () => this.delete(i) }>Удалить</button>
+							<div className="edit-item">
+								<input type='text' value={el.name} onChange={e =>  this.handleChange(e.target.value, el.id, i) }/>
+							</div>
+							<button className="delete-button" onClick={ () => this.delete(i) }>X</button>
 						</div>
 					)): null
 				}
 				{
 					this.state.publishings ? 
 					<div className="edit-control">
-						<button onClick={ () => this.add() } className="add">Добавить издательство</button>
-						<button onClick={ () => this.onSave(this.state.publishings, 'publishings') }className="save">Сохранить</button>
+						<button onClick={ () => this.add() } className="add">Add puslishing</button>
+						<button onClick={ () => this.onSave(this.state.publishings, 'publishings') }className="save">Save</button>
 					</div> : null
 				}
 			</div>

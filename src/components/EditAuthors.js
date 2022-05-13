@@ -66,21 +66,23 @@ export class EditAuthors extends React.Component {
 	render() {
 		return (
 			<div className='edit'>
-				<h3>Список авторов</h3>
+				<h3>Authors list</h3>
 				{
 					this.state.authors !== null ? 
 					this.state.authors.map((el, i) => (
 						<div key={ i } className="edit-component">
-							<input type='text' value={el.name} onChange={e =>  this.handleChange(e.target.value, el.id, i) }/>
-							<button onClick={ () => this.delete(i) }>Удалить</button>
+							<div className="edit-item">
+								<input type='text' value={el.name} onChange={e =>  this.handleChange(e.target.value, el.id, i) }/>
+							</div>
+							<button className="delete-button" onClick={ () => this.delete(i) }>X</button>
 						</div>
 					)): null
 				}
 				{
 					this.state.authors ? 
 					<div className="edit-control">
-						<button onClick={ () => this.add() } className="add">Добавить автора</button>
-						<button onClick={ () => this.onSave(this.state.authors, 'authors') } className="save">Сохранить</button>
+						<button onClick={ () => this.add() } className="add">Add author</button>
+						<button onClick={ () => this.onSave(this.state.authors, 'authors') } className="save">Save changes</button>
 					</div> : null
 				}
 			</div>

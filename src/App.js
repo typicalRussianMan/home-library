@@ -2,8 +2,8 @@ import './App.css';
 import React from "react";
 import { JSONClient } from './JSONClient.js';
 
-import { DisplayBooks } from './DisplayBooks.js';
-import { EditLibrary } from "./EditLibrary.js";
+import { DisplayBooks } from './components/DisplayBooks.js';
+import { EditLibrary } from "./components/EditLibrary.js";
 
 
 /**
@@ -43,8 +43,8 @@ class App extends React.Component {
 					<EditLibrary client={ this.client }/> : 
 					<DisplayBooks client={ this.client }/>				
 				}
-				<button onClick={() => this.toggleEdit()}>
-					{this.state.is_edit_showing ? "Закрыть редактор" : "Открыть редактор"}
+				<button className='toggle-edit-button' onClick={() => this.toggleEdit()}>
+					{this.state.is_edit_showing ? "Close editor" : "Open editor"}
 				</button>
 			</div>
 			

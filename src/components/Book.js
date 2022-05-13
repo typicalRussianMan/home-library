@@ -39,13 +39,13 @@ export class Book extends React.Component {
 		return (
 			<div className='book'>
 				<div className="book-illustration">
-					<img className="book-ill-img" src={require(`./illustrations/${this.state.illustration}`)} alt="Book Illustration" width="200"/>
+					<img className="book-ill-img" src={require(`../illustrations/${this.state.illustration}`)} alt="Book Illustration" width="200"/>
 				</div>
 				<div className="book-info">
-					<div>{ "Название: "+this.state.name }</div>
-					<div>{ "Автор: "+(this.state.is_get_author ? this.state.author : "" )}</div>
-					<div>{ "Издательство: "+ (this.state.is_get_publishing ? this.state.publishing : "") }</div>
-					<div>{ "Год: "+this.state.year }</div>
+					<div>{ "Name: "+this.state.name }</div>
+					<div>{ "Author: "+(this.state.is_get_author ? this.state.author : "" )}</div>
+					<div>{ "Publishing: "+ (this.state.is_get_publishing ? this.state.publishing : "") }</div>
+					<div>{ "Publication year: "+this.state.year }</div>
 				</div>
 				
 			</div>

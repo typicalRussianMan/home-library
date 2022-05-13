@@ -67,17 +67,17 @@ export class EditBooks extends React.Component {
 	render() {
 		return (
 			<div className='edit'>
-				<h3>Список книг</h3>
+				<h3>Books list</h3>
 				{
 					this.state.books !== null ?
 					this.state.books.map((el, i) => (
 						<div key={ i } className="edit-book edit-component">
 							<div className="edit-item">
-								<label>Название книги:</label>
+								<label>Book name:</label>
 								<input className="input-book-field" type='text' value={el.name} onChange={ e => this.handleChange('name', e.target.value, i) }/>
 							</div>
 							<div className="edit-item">
-								<label>Выбрать автора</label>
+								<label>Select author</label>
 								<select className="input-book-field" onChange={e => {
 									const selectedId = e.target.selectedIndex;
 									this.handleChange("author", "authors?id="+this.state.authors[selectedId].id, i)
@@ -93,7 +93,7 @@ export class EditBooks extends React.Component {
 								</select>
 							</div>
 							<div className="edit-item">
-								<label>Выбрать издательство</label>
+								<label>Select publishing</label>
 								<select className="input-book-field" onChange={ e => {
 									const selectedId = e.target.selectedIndex;
 									this.handleChange("publishing", "publishings?id="+this.state.publishings[selectedId].id, i)
@@ -109,11 +109,11 @@ export class EditBooks extends React.Component {
 								</select>
 							</div>
 							<div className="edit-item">
-								<label>Год издания</label>
+								<label>Publication year</label>
 								<input className="input-book-field" type='number' value={el.year} onChange={ e => this.handleChange('year', e.target.value, i) }/>
 							</div>
 							<div className="edit-item">
-								<label>Выбрать иллюстрацию к книге</label>
+								<label>Select book illustration</label>
 								<input className="input-book-field" type='file' onChange={ e => {
 									const value = e.target.value.split('\\');
 									const img = value[value.length - 1];
@@ -127,11 +127,11 @@ export class EditBooks extends React.Component {
 				{
 					this.state.books ? 
 					<div className="edit-control">
-						<button onClick={ () => this.add() } className="add">Добавить книгу</button>
-						<button onClick={ () => this.onSave(this.state.books, 'books') } className="save">Сохранить</button>
+						<button onClick={ () => this.add() } className="add">Add book</button>
+						<button onClick={ () => this.onSave(this.state.books, 'books') } className="save">Save</button>
 					</div> : null
 				}
-				<div>Важно: выбираемая иллюстрация к книге должна находиться в папке illustrations</div>
+				<div>Elected illustration shold be placed in illustration folder</div>
 			</div>
 		)
 	}

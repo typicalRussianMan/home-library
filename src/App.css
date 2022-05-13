@@ -14,6 +14,20 @@
 
 button, input, select {
   cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.toggle-edit-button {
+  font-size: 20px;
+  padding: 3px;
+  border-radius: 0 0 5px 0;
+  color: white;
+  background: #999;
+}
+
+.toggle-edit-button:hover {
+  background: #888;
 }
 
 .delete-button {
