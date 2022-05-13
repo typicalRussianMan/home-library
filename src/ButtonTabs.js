@@ -18,7 +18,7 @@ export class ButtonTabs extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="tabs-block">
                 {this.state.tabs.map((el, i) => <button onClick={ () => this.onChange(el) } key={ i }>{capitalize(el)}</button>)}
             </div>
         )

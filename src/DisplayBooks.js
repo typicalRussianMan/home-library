@@ -26,12 +26,17 @@ export class DisplayBooks extends React.Component {
 
 	render() {
 		return (
-			this.state.lib_data ?
-			this.state.lib_data.map((el, i) => <Book
-				key={i} 
-				bookData={el}
-				client={this.client}
-				/>) : null
+			<div className='books-block'>
+				{
+					this.state.lib_data ?
+					this.state.lib_data.map((el, i) => <Book
+						key={i} 
+						bookData={el}
+						client={this.client}
+						/>) : null
+				}
+			</div>
+			
 		)
 	}
 

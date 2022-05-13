@@ -62,54 +62,73 @@ export class EditBooks extends React.Component {
 		this.setState({
 			books: books
 		})
-		console.log(books)
 	}
 
 	render() {
 		return (
-			<div className='edit-books'>
+			<div className='edit'>
+				<h3>Список книг</h3>
 				{
 					this.state.books !== null ?
 					this.state.books.map((el, i) => (
-						<div key={ i }>
-							<input type='text' value={el.name} onChange={ e => this.handleChange('name', e.target.value, i) }/>
-							<select onChange={e => {
-								const selectedId = e.target.selectedIndex;
-								this.handleChange("author", "authors?id="+this.state.authors[selectedId].id, i)
-							}}>
+						<div key={ i } className="edit-book edit-component">
+							<div className="edit-item">
+								<label>Название книги:</label>
+								<input className="input-book-field" type='text' value={el.name} onChange={ e => this.handleChange('name', e.target.value, i) }/>
+							</div>
+							<div className="edit-item">
+								<label>Выбрать автора</label>
+								<select className="input-book-field" onChange={e => {
+									const selectedId = e.target.selectedIndex;
+									this.handleChange("author", "authors?id="+this.state.authors[selectedId].id, i)
+								}}>
+									{
+										this.state.authors.map((auth, id) => (
+											<option 
+												value={ "authors?id="+auth.id } 
+												selected={el.author === "authors?id="+auth.id ? 1: 0} 
+												key={ id }>{auth.name}</option>
+										)) 
+									}
+								</select>
+							</div>
+							<div className="edit-item">
+								<label>Выбрать издательство</label>
+								<select className="input-book-field" onChange={ e => {
+									const selectedId = e.target.selectedIndex;
+									this.handleChange("publishing", "publishings?id="+this.state.publishings[selectedId].id, i)
+								}}>
 								{
-									this.state.authors.map((auth, id) => (
-										<option 
-											value={ "authors?id="+auth.id } 
-											selected={el.author === "authors?id="+auth.id ? 1: 0} 
-											key={ id }>{auth.name}</option>
-									)) 
-								}
-							</select>
-							<select onChange={ e => {
-								const selectedId = e.target.selectedIndex;
-								this.handleChange("publishing", "publishings?id="+this.state.publishings[selectedId].id, i)
-							}}>
-							{
-									this.state.publishings.map((pub, id) => (
-										<option 
-											value={ "publishings?id="+pub.id } 
-											selected={el.publishing === "publishings?id="+pub.id ? 1: 0} 
-											key={ id }>{pub.name}</option>
-									)) 
-								}
-							</select>
-							<input type='number' value={el.year} onChange={ e => this.handleChange('year', e.target.value, i) }/>
-							<span>Photo input</span>
-							<button onClick={ () => this.delete(i) }>Delete</button>
+										this.state.publishings.map((pub, id) => (
+											<option 
+												value={ "publishings?id="+pub.id } 
+												selected={el.publishing === "publishings?id="+pub.id ? 1: 0} 
+												key={ id }>{pub.name}</option>
+										)) 
+									}
+								</select>
+							</div>
+							<div className="edit-item">
+								<label>Год издания</label>
+								<input className="input-book-field" type='number' value={el.year} onChange={ e => this.handleChange('year', e.target.value, i) }/>
+							</div>
+							<div className="edit-item">
+								<label>Выбрать иллюстрацию к книге</label>
+								<input className="input-book-field" type='file' onChange={ e => {
+									const value = e.target.value.split('\\');
+									const img = value[value.length - 1];
+									this.handleChange('illustration', img, i) 
+							} }/>
+							</div>
+							<button className="delete-button" onClick={ () => this.delete(i) }>X</button>
 						</div>
 					)) : null
 				}
 				{
 					this.state.books ? 
-					<div>
-						<button onClick={ () => this.add() }>Add new</button>
-						<button onClick={ () => this.onSave(this.state.books, 'books') }>Save</button>
+					<div className="edit-control">
+						<button onClick={ () => this.add() } className="add">Добавить книгу</button>
+						<button onClick={ () => this.onSave(this.state.books, 'books') } className="save">Сохранить</button>
 					</div> : null
 				}
 				<div>Важно: выбираемая иллюстрация к книге должна находиться в папке illustrations</div>

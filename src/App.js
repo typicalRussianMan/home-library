@@ -6,12 +6,17 @@ import { DisplayBooks } from './DisplayBooks.js';
 import { EditLibrary } from "./EditLibrary.js";
 
 
-
+/**
+ * Application initialization
+ */
 class App extends React.Component {
 
 	constructor() {
 		super();
 
+		/**
+		 * is_edit_showing - switch between editor and display block
+		 */
 		this.state = {
 			is_edit_showing: false
 		}
@@ -20,8 +25,9 @@ class App extends React.Component {
 		
 	}
 
-	
-
+	/**
+	 * function for switching between EditLibrary and DisplayBooks
+	 */
 	toggleEdit() {
 		const is_edit_showing = this.state.is_edit_showing
 		this.setState({

@@ -1,44 +1,52 @@
 {
   "books": [
     {
-      "name": "book 1",
-      "author": "authors?id=89MtnYFuTjUsyzx0rg",
+      "name": "Архивариус",
+      "author": "authors?id=lZnAyBROFzEeraiHmP",
       "id": "5g0aLvkCGHEOfFzUbB",
       "publishing": "publishings?id=y3qPVAQWli6Zo19cCG",
-      "year": 2020,
-      "illustration": "jojo.jpg"
+      "year": "2015",
+      "illustration": "archivarius.jpeg"
     },
     {
-      "name": "book 2",
+      "name": "Портрет Дориана Грея",
       "author": "authors?id=2kyJ7AEXZeTp9MwV10",
       "id": "785ghuhrH98H98",
       "publishing": "publishings?id=ZgNEMqPOQcr4tCWGwf",
-      "year": 1220,
-      "illustration": "no-photo.png"
+      "year": "2000",
+      "illustration": "dorian_grey.jpg"
+    },
+    {
+      "name": "Jojo Bizzare Adventure",
+      "author": "authors?id=89MtnYFuTjUsyzx0rg",
+      "id": "oTQ94NfSIBh7syK6u3",
+      "publishing": "publishings?id=ZgNEMqPOQcr4tCWGwf",
+      "year": "1989",
+      "illustration": "jojo.jpg"
     }
   ],
   "authors": [
     {
-      "name": "New Author...",
-      "id": "Dtn468zikQOdpF5hUm"
-    },
-    {
-      "name": "Chel",
+      "name": "Оскар Уайльд",
       "id": "2kyJ7AEXZeTp9MwV10"
     },
     {
-      "name": "Author Molod",
+      "name": "Хирохико Араки",
       "id": "89MtnYFuTjUsyzx0rg"
+    },
+    {
+      "name": "Ингви Акисон",
+      "id": "lZnAyBROFzEeraiHmP"
     }
   ],
   "publishings": [
     {
-      "id": "y3qPVAQWli6Zo19cCG",
-      "name": "New Publishing..."
+      "name": "Атом",
+      "id": "y3qPVAQWli6Zo19cCG"
     },
     {
-      "id": "ZgNEMqPOQcr4tCWGwf",
-      "name": "New Publishing..."
+      "name": "Издательство",
+      "id": "ZgNEMqPOQcr4tCWGwf"
     }
   ]
 }

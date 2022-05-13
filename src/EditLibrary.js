@@ -27,16 +27,6 @@ export class EditLibrary extends React.Component {
 		})
 	}
 
-	parseArrToObj(arr) {
-		let obj = {};
-
-		for (const el of arr) {
-			obj[el.id] = el;
-		}
-
-		return obj;
-	}
-
 	async handleSave(data, table) {
 		this.setState({
 			openedTab: 0
